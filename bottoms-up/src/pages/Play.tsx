@@ -4,7 +4,7 @@ import Navigation from '../components/Navigation';
 import { getRandomCard } from '../utils/utils';
 
 function Play() {
-  const [source, setSource] = useState('everyone_drinks');
+  const [source, setSource] = useState('bottoms_up');
 
   const drawNewCard = () => {
     setSource(getRandomCard());
@@ -19,12 +19,13 @@ function Play() {
             <Image
               src={'cards/' + source + '.png'}
               alt='currentCard'
-              width='100%'
-              paddingX='20%'
+              width='60%'
+              marginX='20%'
+              borderRadius='lg'
             />
             <Center marginTop='10'>
               <Button colorScheme='teal' variant='ghost' onClick={drawNewCard}>
-                Get Card
+                Draw a card
               </Button>
             </Center>
           </Box>
